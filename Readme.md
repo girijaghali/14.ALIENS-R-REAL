@@ -1,11 +1,10 @@
-#[ALIENS-R-REAL]  **https://girijaghali.github.io/14.ALIENS-R-REAL/**
-
+#[ALIENS-R-REAL]  
 
 ![Aiens_R_Real](ufo-portal2.jpg)
 
 ## Background
 
-WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at **www.ALIENS-R-REAL.com** have collected all of the eye-witness reports we could to prove it! I had put this information online for the world to see and then the matter will finally be put to rest.
+WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at **https://girijaghali.github.io/14.ALIENS-R-REAL/** have collected all of the eye-witness reports we could to prove it! I had put this information online for the world to see and then the matter will finally be put to rest.
 
 
 In this web application, I wrote code (using JavaScript, HTML, and CSS) that will create a table dynamically based upon a [dataset](Data/data.js). This also allows the users to search through the table for specific pieces of information.  
