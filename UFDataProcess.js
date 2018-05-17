@@ -17,7 +17,7 @@ $resetBtn.addEventListener("click", handleResetClick);
 allData = dataSet;
 displayData = allData;
 
-function isValidDate(dateString)
+function validDate(dateString)
 {
     // First check for the pattern
     console.log(dateString);
@@ -53,21 +53,16 @@ function isValidDate(dateString)
 function handleSearchClick()
 {
     console.log("Yay!! Search");
+    event.preventDefault();
     var datetime_t_val = $datetimeInput.value.trim();
-    if(isValidDate(datetime_t_val)) datetime_filter = datetime_t_val;
+    datetime_filter = validDate(datetime_t_val);
     var city_filter = $cityInput.value.toLowerCase().trim();
     var state_filter = $stateInput.value.trim().toLowerCase();
     var country_filter = $countryInput.value.trim().toLowerCase();
     var shape_filter  = $shapeInput.value.trim().toLowerCase();
     var comment_filter = $commentInput.value.trim().toLowerCase();
-
-    // var filteredData1 = allData.filter((data) => {
-    //     if (data.state === 'ar') {
-    //         console.log('ARKANSAS');
-    //     }
-    // return data.state === "ar"
-    //     })
-    // console.log('FILTERED DATA:', filteredData1);
+    console.log(datetime_t_val);
+    console.log(datetime_filter)
 
     var filteredData = allData.filter(function(data){
         var datetime_val = data.datetime;
@@ -78,13 +73,13 @@ function handleSearchClick()
         var comment_val =  data.comments.toLowerCase();
         console.log('val : ' + city_val);
         console.log('filter : ' + city_filter);
-        if ( city_val == city_filter
-            // (datetime_val === datetime_filter || datetime_val ==='') &&
-//             (city_val === city_filter || city_val ==='') &&
-//             (state_val === state_filter || state_val==='') &&
-//             (country_val === country_filter || country_val==='') &&
-//             (shape_val === shape_filter || shape_val==='')  &&
-//             (comment_val === comment_filter || comment_val==='')
+        if ( 
+            (datetime_val === datetime_filter || datetime_val ==='') ||
+            (city_val === city_filter || city_val ==='') ||
+            (state_val === state_filter || state_val==='') ||
+            (country_val === country_filter || country_val==='') ||
+            (shape_val === shape_filter || shape_val==='')  ||
+            (comment_val.search(comment_filter) || comment_val==='')
            )
         {
                 console.log(datetime_val);
@@ -112,12 +107,18 @@ function handleSearchClick()
 
 
 
-
 function handleResetClick()
 {
-
+    event.preventDefault();
+    document.getElementById("datetime-input").value = '';
+    document.getElementById("city-input").value = '';
+    document.getElementById("state-input").value = '';
+    document.getElementById("country-input").value = '';
+    document.getElementById("shape-input").value = '';
+    document.getElementById("comment-input").value = '';
     $tbody.innerHTML = "";
-    consoloe.log('confused??');
+    displayData = allData;
+    renderTable();
 }
 
 

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>UFO Sightings</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style type="text/css">
     button,
     div,
@@ -17,49 +18,44 @@
 <body>
 
   <div class="container">
-    <h1>Movie Search</h1>
-
-    <!-- Movies will Get Dumped Dere -->
-    <div id="movies-view"></div>
-
-    <!-- Rendered Buttons will get Dumped Here  -->
-    <div id="buttons-view"></div>
-
-    <form id="movie-form">
+  <!--  <h1><center>UFO sightings</center></h1> -->
+    <img src="ufo-portal2.jpg" alt="UFO">
+    <br>
+    <form id="alien-form">
       <div class="row">
-      <div class="col-md-4">
-        <label for="search-datetime-input">DateTime</label>
+        <div class="col">
+          <label for="search-datetime-input">DateTime</label>
           <input type="text" id="datetime-input"><br>
-      </div>
-      <div class="col-md-4">
-        <label for="search-city-input">City</label>
+        </div>
+        <div class="col">
+          <label for="search-city-input">City</label>
           <input type="text" id="city-input"><br>
-      </div>
-      <div class="col-md-4">
-        <label for="search-state-input">State</label>
+        </div>
+        <div class="col">
+          <label for="search-state-input">State</label>
           <input type="text" id="state-input"><br>
+        </div>
       </div>
-      </div>
-      <div class="row">
-      <div class="col-md-4">
-        <label for="search-country-input">Country</label>
+      <div class="row"> 
+        <div class="col">
+          <label for="search-country-input">Country</label>
           <input type="text" id="country-input"><br>
-      </div>
-      <div class="col-md-4">
-        <label for="search-shape-input">Shape</label>
+        </div>
+        <div class="col">
+          <label for="search-shape-input">Shape</label>
           <input type="text" id="shape-input"><br>
-      </div>
-      <div class="col-md-4">
-        <label for="search-comment-input">Comment</label>
+        </div>
+        <div class="col">
+          <label for="search-comment-input">Comment</label>
           <input type="text" id="comment-input"><br>
-      </div>
+        </div>
       </div>
 
       <!-- Button triggers new movie to be added -->
       <input id="search" type="submit" value="Search">
       <input id="reset" type="submit" value="Reset">
-
     </form>
+
     <div class="row">
     <div class="col-md-12">
       <h2><center><strong>UFO Sightings Data</strong></center></h2>
@@ -83,7 +79,7 @@
     <script src="Data/data.js" type="text/javascript"></script>
     <script src="UFDataProcess.js" type="text/javascript"></script>
     
-  </div>
+</div>
 </body>
 
 </html>
