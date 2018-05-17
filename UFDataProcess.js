@@ -3,7 +3,7 @@ var $cityInput = document.querySelector("#city-input");
 var $stateInput = document.querySelector("#state-input")
 var $countryInput = document.querySelector("#country-input");
 var $shapeInput = document.querySelector("#shape-input");
-var $commentInput = document.querySelector("#comment-input");
+//var $commentInput = document.querySelector("#comment-input");
 
 var $searchBtn = document.querySelector("#search");
 var $resetBtn = document.querySelector("#reset");
@@ -60,7 +60,7 @@ function handleSearchClick()
     var state_filter = $stateInput.value.trim().toLowerCase();
     var country_filter = $countryInput.value.trim().toLowerCase();
     var shape_filter  = $shapeInput.value.trim().toLowerCase();
-    var comment_filter = $commentInput.value.trim().toLowerCase();
+    //var comment_filter = $commentInput.value.trim().toLowerCase();
     console.log(datetime_t_val);
     console.log(datetime_filter)
 
@@ -70,7 +70,7 @@ function handleSearchClick()
         var state_val =  data.state.toLowerCase();
         var country_val =  data.country.toLowerCase();
         var shape_val  =  data.shape.toLowerCase();
-        var comment_val =  data.comments.toLowerCase();
+        //var comment_val =  data.comments.toLowerCase();  
         console.log('val : ' + city_val);
         console.log('filter : ' + city_filter);
         if ( 
@@ -78,8 +78,8 @@ function handleSearchClick()
             (city_val === city_filter || city_val ==='') ||
             (state_val === state_filter || state_val==='') ||
             (country_val === country_filter || country_val==='') ||
-            (shape_val === shape_filter || shape_val==='')  ||
-            (comment_val.search(comment_filter) || comment_val==='')
+            (shape_val === shape_filter || shape_val==='') 
+            //(comment_val.includes(comment_filter) || comment_val==='')
            )
         {
                 console.log(datetime_val);
@@ -87,7 +87,7 @@ function handleSearchClick()
                 console.log(state_val);
                 console.log(country_val);
                 console.log(shape_filter);
-                console.log(comment_filter);
+                //console.log(comment_filter);
                 return true;
         }
         else 
@@ -115,7 +115,7 @@ function handleResetClick()
     document.getElementById("state-input").value = '';
     document.getElementById("country-input").value = '';
     document.getElementById("shape-input").value = '';
-    document.getElementById("comment-input").value = '';
+    //document.getElementById("comment-input").value = '';
     $tbody.innerHTML = "";
     displayData = allData;
     renderTable();
